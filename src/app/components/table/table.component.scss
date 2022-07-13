@@ -1,3 +1,14 @@
-.table-container {
+.page-container {
+    margin: 1em 5em;
+
+    h1 {
+        font-weight: 500;
+    }
     
+    .table-container {
+        table {
+            width: 100%;
+        }
+    }
 }
+
