@@ -1,3 +1,21 @@
-<div class="table-details-container">
-
+<div class="table-details-container" *ngIf="customer">
+    <div class="person-icon">
+        <mat-icon>account_circle</mat-icon>
+    </div>
+    <div class="name-container">
+        <span class="name">{{customer.FirstName}} {{customer.LastName}}</span>
+        <span>{{customer.NickName}}</span>
+    </div>
+    <div class="age-container">
+        <span class="header">Age</span>
+        <span>{{customer.Age}}</span>
+    </div>
+    <div class="pin-container">
+        <span class="header">Pin</span>
+        <span>{{customer.PinCode}}</span> 
+    </div>
+    <div class="location-container">
+        <span class="header">Location</span>
+        <span>{{customer.City}} {{customer.State}}, {{customer.Country}}</span> 
+    </div>
 </div>

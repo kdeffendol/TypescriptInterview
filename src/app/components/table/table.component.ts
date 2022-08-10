@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { CustomerRecord, CUSTOMER_RECORDS } from 'src/app/constants/customer-records';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -13,6 +13,7 @@ export class TableComponent implements AfterViewInit {
 
   public records: CustomerRecord[] = CUSTOMER_RECORDS;
   public recordsTableData = new MatTableDataSource(this.records);
+  public selectedCustomer: CustomerRecord | null = null;
 
   public readonly columnsToDisplay = [
     'FirstName',
@@ -27,5 +28,9 @@ export class TableComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.recordsTableData.sort = this.sort;
+  }
+
+  public viewDetails(customer: CustomerRecord): void {
+    this.selectedCustomer = customer;
   }
 }

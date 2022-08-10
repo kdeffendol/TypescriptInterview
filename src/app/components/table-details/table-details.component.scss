@@ -1,3 +1,52 @@
 .table-details-container {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cen-primary);
+    padding: 3em;
+    margin-top: 1em;
+    background-color: whitesmoke;
+
+    .person-icon {
+        flex: 1;
+        mat-icon {
+            font-size: 80px;
+            color: lightgray;
+        }
+        padding: 2em;
+    }
+
+    .name-container {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        .name {
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+
+    .age-container {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pin-container {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location-container {
+        flex: 5;
+        display: flex;
+        flex-direction: column;  
+    }
+
+    .header {
+        color: var(--cen-primary);
+        font-weight: 500;
+        font-size: 18px;
+    }
 }

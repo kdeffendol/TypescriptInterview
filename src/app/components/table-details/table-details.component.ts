@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CustomerRecord } from 'src/app/constants/customer-records';
 
 @Component({
   selector: 'app-table-details',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableDetailsComponent implements OnInit {
 
+  @Input() customer: CustomerRecord | null = null;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

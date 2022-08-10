@@ -4,6 +4,7 @@ import { TableComponent } from './table.component';
 import { MatTableModule } from "@angular/material/table";
 import { MatButtonModule } from '@angular/material/button';
 import { MatSortModule } from '@angular/material/sort';
+import { TableDetailsModule } from '../table-details/table-details.module';
 
 
 
@@ -15,7 +16,8 @@ import { MatSortModule } from '@angular/material/sort';
     CommonModule,
     MatTableModule,
     MatButtonModule,
-    MatSortModule
+    MatSortModule,
+    TableDetailsModule
   ],
   exports: [
     TableComponent
